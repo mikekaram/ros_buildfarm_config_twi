@@ -8,7 +8,7 @@ jenkins_job_timeout: 120
 notifications:
   committers: false
   emails:
-  - ros-buildfarm-testfarm@googlegroups.com
+  - mike.karamousadakis@twi.gr
   maintainers: false
 repositories:
   keys:

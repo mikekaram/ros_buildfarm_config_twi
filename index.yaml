@@ -7,7 +7,7 @@ distributions:
       default: indigo/doc-build.yaml
       released-packages-without-doc-job: indigo/doc-released-build.yaml
     notification_emails:
-    - ros-buildfarm-testfarm@googlegroups.com
+    - mike.karamousadakis@twi.gr
     release_builds:
 #      arm: indigo/release-armhf-build.yaml
       default: indigo/release-build.yaml
@@ -18,7 +18,7 @@ distributions:
 #      default: jade/doc-build.yaml
 #      released-packages-without-doc-job: jade/doc-released-build.yaml
 #    notification_emails:
-#    - ros-buildfarm-testfarm@googlegroups.com
+#    - mike.karamousadakis@twi.gr
 #    release_builds:
 #      arm: jade/release-armhf-build.yaml
 #      default: jade/release-build.yaml
@@ -29,7 +29,7 @@ distributions:
       default: kinetic/doc-build.yaml
       released-packages-without-doc-job: kinetic/doc-released-build.yaml
     notification_emails:
-    - ros-buildfarm-kinetic@googlegroups.com
+    - mike.karamousadakis@twi.gr
     release_builds:
       arm: kinetic/release-armhf-build.yaml
       default: kinetic/release-build.yaml
@@ -37,9 +37,9 @@ distributions:
       default: kinetic/source-build.yaml
 doc_builds:
   independent-packages: doc-independent-build.yaml
-jenkins_url: http://54.183.26.131:8080
+jenkins_url: https://buildfarm.thlrnd.com
 notification_emails:
-- ros-buildfarm-testfarm@googlegroups.com
+- mike.karamousadakis@twi.gr
 prerequisites:
   debian_repositories:
   - http://54.183.65.232/ubuntu/building
