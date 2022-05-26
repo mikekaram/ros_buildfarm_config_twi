@@ -105,3 +105,4 @@ status_page_repositories:
   - http://repo.thlrnd.com/ubuntu/main
 type: buildfarm
 version: 1
+git_ssh_credential_id: mikekaram_twi
