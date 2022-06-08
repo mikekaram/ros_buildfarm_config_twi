@@ -23,6 +23,14 @@ type: doc-build
 upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
 upload_host: repo
 upload_root: /var/repos/docs
+install_pip_packages:
+  - catkin-sphinx
+  - pyyaml
+  - python-dateutil
+  - xmlschema
+  - distro
+install_apt_packages:
+  - python3-sphinx
 # The `upload_user` defaults from source and can be tuned as needed.
 # upload_user: jenkins-agent
 version: 2
