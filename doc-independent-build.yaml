@@ -15,11 +15,6 @@ jenkins_job_timeout: 30
 notifications:
   emails:
   - mike.karamousadakis@twi.gr
-package_whitelist:
-  - ardrone_autonomy
-  - darknet
-  - gazebo_ros
-skip_ignored_packages: true
 targets:
   ubuntu:
     trusty:
