@@ -10,9 +10,12 @@ notifications:
   emails:
   - mike.karamousadakis@twi.gr
   maintainers: false
-package_blacklist:
+package_whitelist:
   - ardrone_autonomy
   - darknet
+  - gazebo_ros
+skip_ignored_packages: true
+package_blacklist:
   - octovis
   - ueye
 sync:

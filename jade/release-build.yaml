@@ -12,6 +12,11 @@ notifications:
   maintainers: false
 sync:
   package_count: 900
+package_whitelist:
+  - ardrone_autonomy
+  - darknet
+  - gazebo_ros
+skip_ignored_packages: true
 repositories:
   keys:
   - |

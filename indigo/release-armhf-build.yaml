@@ -10,6 +10,12 @@ notifications:
   emails:
   - mike.karamousadakis@twi.gr
   maintainers: false
+package_whitelist:
+  - actionlib
+  - abb
+  - acado
+  - gazebo_ros
+skip_ignored_packages: true
 package_blacklist:
   - ardrone_autonomy
   - avt_vimba_camera

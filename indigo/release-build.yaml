@@ -12,6 +12,12 @@ notifications:
   maintainers: false
 sync:
   package_count: 2000
+package_whitelist:
+  - actionlib
+  - abb
+  - acado
+  - gazebo_ros
+skip_ignored_packages: true
 repositories:
   keys:
   - |
