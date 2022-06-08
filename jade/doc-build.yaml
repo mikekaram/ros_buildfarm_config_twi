@@ -10,11 +10,6 @@ notifications:
   emails:
   - mike.karamousadakis@twi.gr
   maintainers: false
-package_whitelist:
-  - ardrone_autonomy
-  - darknet
-  - gazebo_ros
-skip_ignored_packages: true
 repositories:
   keys:
   - |
