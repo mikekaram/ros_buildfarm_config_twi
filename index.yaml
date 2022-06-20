@@ -13,6 +13,7 @@ distributions:
       default: indigo/release-build.yaml
     source_builds:
       default: indigo/source-build.yaml
+    python_version: 2
 #  jade:
 #    doc_builds:
 #      default: jade/doc-build.yaml
