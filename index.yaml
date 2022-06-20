@@ -2,29 +2,6 @@
 # ROS buildfarm index file
 ---
 distributions:
-  indigo:
-    doc_builds:
-      default: indigo/doc-build.yaml
-      released-packages-without-doc-job: indigo/doc-released-build.yaml
-    notification_emails:
-    - mike.karamousadakis@twi.gr
-    release_builds:
-#      arm: indigo/release-armhf-build.yaml
-      default: indigo/release-build.yaml
-    source_builds:
-      default: indigo/source-build.yaml
-    python_version: 2
-#  jade:
-#    doc_builds:
-#      default: jade/doc-build.yaml
-#      released-packages-without-doc-job: jade/doc-released-build.yaml
-#    notification_emails:
-#    - mike.karamousadakis@twi.gr
-#    release_builds:
-#      arm: jade/release-armhf-build.yaml
-#      default: jade/release-build.yaml
-#    source_builds:
-#      default: jade/source-build.yaml
   kinetic:
     doc_builds:
       default: kinetic/doc-build.yaml
