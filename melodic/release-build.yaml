@@ -13,9 +13,10 @@ notifications:
 sync:
   package_count: 1
 package_whitelist:
-  - ardrone_autonomy
-  - darknet
-  - gazebo_ros
+  - catkin
+  - abb_driver
+  - gencpp
+  - genmsg
 skip_ignored_packages: true
 repositories:
   keys:

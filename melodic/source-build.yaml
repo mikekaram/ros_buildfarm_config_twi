@@ -12,9 +12,10 @@ notifications:
   - mike.karamousadakis@twi.gr
   maintainers: false
 repository_whitelist:
-  - ardrone_autonomy
-  - darknet
-  - gazebo_ros
+  - catkin
+  - abb_driver
+  - gencpp
+  - genmsg
 skip_ignored_repositories: true
 repositories:
   urls:

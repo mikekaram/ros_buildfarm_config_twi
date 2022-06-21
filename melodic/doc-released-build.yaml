@@ -10,9 +10,10 @@ notifications:
   emails:
   - mike.karamousadakis@twi.gr
 package_whitelist:
-  - ardrone_autonomy
-  - darknet
-  - gazebo_ros
+  - catkin
+  - abb_driver
+  - gencpp
+  - genmsg
 skip_ignored_packages: true
 targets:
   ubuntu:
