@@ -1,42 +1,25 @@
 %YAML 1.1
-# ROS buildfarm index file
+# ROS buildfarm source-build file
 ---
-distributions:
-  # kinetic:
-  #   doc_builds:
-  #     default: kinetic/doc-build.yaml
-  #     released-packages-without-doc-job: kinetic/doc-released-build.yaml
-  #   notification_emails:
-  #   - mike.karamousadakis@twi.gr
-  #   release_builds:
-  #     arm: kinetic/release-armhf-build.yaml
-  #     default: kinetic/release-build.yaml
-  #   source_builds:
-  #     default: kinetic/source-build.yaml
-  melodic:
-    doc_builds:
-      default: melodic/doc-build.yaml
-      released-packages-without-doc-job: melodic/doc-released-build.yaml
-    notification_emails:
-    - mike.karamousadakis@twi.gr
-    release_builds:
-      default: melodic/release-build.yaml
-#      ds: melodic/release-stretch-build.yaml
-#      dsv8: melodic/release-stretch-arm64-build.yaml
-      ubhf: melodic/release-armhf-build.yaml
-#      ubv8: melodic/release-arm64-build.yaml
-    source_builds:
-      default: melodic/source-build.yaml
-#      ds: melodic/source-stretch-build.yaml
-doc_builds:
-  independent-packages: doc-independent-build.yaml
-jenkins_url: https://buildfarm.thlrnd.com
-notification_emails:
-- mike.karamousadakis@twi.gr
-prerequisites:
-  debian_repositories:
-  - http://repo.thlrnd.com/ubuntu/building
-  debian_repository_keys:
+build_environment_variables:
+  ROS_PYTHON_VERSION: 2
+jenkins_commit_job_priority: 69
+jenkins_job_timeout: 120
+jenkins_pull_request_job_priority: 59
+notifications:
+  committers: false
+  emails:
+  - mike.karamousadakis@twi.gr
+  maintainers: false
+repository_whitelist:
+  - ardrone_autonomy
+  - darknet
+  - gazebo_ros
+skip_ignored_repositories: true
+repositories:
+  urls:
+  - http://repo.thlrnd.com/ubuntu/testing
+  keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -90,12 +73,15 @@ prerequisites:
     yTEs3OtqpmlI5Al7g2Q18XLkPCj+5OE0
     =ClaR
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
-status_page_repositories:
-  default:
-  - http://repo.thlrnd.com/ubuntu/building
-  - http://repo.thlrnd.com/ubuntu/testing
-  - http://repo.thlrnd.com/ubuntu/main
-type: buildfarm
-version: 1
-git_ssh_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
+targets:
+  ubuntu:
+    bionic:
+      amd64:
+test_commits:
+  default: true
+# do not run pr builds on the test farm (otherwise we'll get multiple reports)
+test_pull_requests:
+  default: false
+  force: false
+type: source-build
+version: 2

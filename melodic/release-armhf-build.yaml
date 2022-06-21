@@ -1,42 +1,27 @@
 %YAML 1.1
-# ROS buildfarm index file
+# ROS buildfarm release-build file
 ---
-distributions:
-  # kinetic:
-  #   doc_builds:
-  #     default: kinetic/doc-build.yaml
-  #     released-packages-without-doc-job: kinetic/doc-released-build.yaml
-  #   notification_emails:
-  #   - mike.karamousadakis@twi.gr
-  #   release_builds:
-  #     arm: kinetic/release-armhf-build.yaml
-  #     default: kinetic/release-build.yaml
-  #   source_builds:
-  #     default: kinetic/source-build.yaml
-  melodic:
-    doc_builds:
-      default: melodic/doc-build.yaml
-      released-packages-without-doc-job: melodic/doc-released-build.yaml
-    notification_emails:
-    - mike.karamousadakis@twi.gr
-    release_builds:
-      default: melodic/release-build.yaml
-#      ds: melodic/release-stretch-build.yaml
-#      dsv8: melodic/release-stretch-arm64-build.yaml
-      ubhf: melodic/release-armhf-build.yaml
-#      ubv8: melodic/release-arm64-build.yaml
-    source_builds:
-      default: melodic/source-build.yaml
-#      ds: melodic/source-stretch-build.yaml
-doc_builds:
-  independent-packages: doc-independent-build.yaml
-jenkins_url: https://buildfarm.thlrnd.com
-notification_emails:
-- mike.karamousadakis@twi.gr
-prerequisites:
-  debian_repositories:
-  - http://repo.thlrnd.com/ubuntu/building
-  debian_repository_keys:
+abi_incompatibility_assumed: true
+jenkins_binary_job_priority: 94
+jenkins_binary_job_timeout: 600
+jenkins_source_job_priority: 79
+jenkins_source_job_timeout: 30
+notifications:
+  emails:
+  - mike.karamousadakis@twi.gr
+  maintainers: false
+package_whitelist:
+  - ardrone_autonomy
+  - darknet
+  - gazebo_ros
+skip_ignored_packages: true
+package_blacklist:
+  - octovis
+  - ueye
+sync:
+  package_count: 1
+repositories:
+  keys:
   - |
     -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -90,12 +75,13 @@ prerequisites:
     yTEs3OtqpmlI5Al7g2Q18XLkPCj+5OE0
     =ClaR
     -----END PGP PUBLIC KEY BLOCK-----
-rosdistro_index_url: https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
-status_page_repositories:
-  default:
+  urls:
   - http://repo.thlrnd.com/ubuntu/building
-  - http://repo.thlrnd.com/ubuntu/testing
-  - http://repo.thlrnd.com/ubuntu/main
-type: buildfarm
-version: 1
-git_ssh_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
+target_repository: http://repo.thlrnd.com/ubuntu/building
+targets:
+  ubuntu:
+    bionic:
+      armhf:
+type: release-build
+upload_credential_id: 1e7d4696-7fd4-4bc6-8c87-ebc7b6ce16e5
+version: 2
