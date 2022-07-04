@@ -7,6 +7,8 @@ canonical_base_url: http://repo.thlrnd.com/docs
 documentation_type: rosdoc_lite
 jenkins_job_priority: 89
 jenkins_job_timeout: 120
+tag_whitelist:
+  - thlrnd
 notifications:
   committers: false
   emails:

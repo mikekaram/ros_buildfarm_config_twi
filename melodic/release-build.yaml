@@ -12,12 +12,8 @@ notifications:
   maintainers: false
 sync:
   package_count: 1
-package_whitelist:
-  - catkin
-  - abb_driver
-  - gencpp
-  - genmsg
-skip_ignored_packages: true
+tag_whitelist:
+  - thlrnd
 repositories:
   keys:
   - |

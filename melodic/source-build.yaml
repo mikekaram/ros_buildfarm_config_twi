@@ -3,6 +3,8 @@
 ---
 build_environment_variables:
   ROS_PYTHON_VERSION: 2
+tag_whitelist:
+  - thlrnd
 jenkins_commit_job_priority: 69
 jenkins_job_timeout: 120
 jenkins_pull_request_job_priority: 59
@@ -11,12 +13,6 @@ notifications:
   emails:
   - mike.karamousadakis@twi.gr
   maintainers: false
-repository_whitelist:
-  - catkin
-  - abb_driver
-  - gencpp
-  - genmsg
-skip_ignored_repositories: true
 repositories:
   urls:
   - http://repo.thlrnd.com/ubuntu/testing
@@ -75,6 +71,9 @@ repositories:
     =ClaR
     -----END PGP PUBLIC KEY BLOCK-----
 targets:
+  _config:
+    custom_rosdep_urls:
+      - https://raw.githubusercontent.com/mikekaram/rosdistro/master/rosdep/sources.list.d/20-default.list
   ubuntu:
     bionic:
       amd64:
